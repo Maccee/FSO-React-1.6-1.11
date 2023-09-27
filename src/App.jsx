@@ -41,14 +41,14 @@ const StatisticLine = (props) => {
     return (
       <tr>
         <td>{props.text}</td>
-        <td>{props.value} %</td>
+        <td>{Math.round((props.value + Number.EPSILON) * 100) / 100} %</td>
       </tr>
     );
   }
   return (
     <tr>
       <td>{props.text}</td>
-      <td>{props.value}</td>
+      <td>{Math.round((props.value + Number.EPSILON) * 100) / 100}</td>
     </tr>
   );
 };
